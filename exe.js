@@ -46,7 +46,7 @@ var constantize = (obj) => {
     )
 }
 //在所有情况下都取到顶层对象
-(typoof window !== 'underfined'
+(typeof window !== 'undefined'
 ? window
 :(typeof process === 'object' &&
   typeof require === 'function'&&
@@ -54,3 +54,16 @@ var constantize = (obj) => {
   ? global
   :this
 );
+//Destructuring
+let [a,b,c] = [1,2,3];
+let [x,y, ...z] = ['a'];
+x//"a"
+y//undefined
+z//[]
+let Iterator //接口
+let [foo = true] = []  // foo true
+
+const person = 'Jelly';
+const age = 5;
+const sentence = `${person} is ${age} years old`;
+console.log(sentence);

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .highlight{
+        padding: 2px 5px;
+        background: #00adb5;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <div class="zoom">Click me</div>
+<script>
+    // const button = document.querySelector('.zoom');
+    // button.addEventListener('click',function(){
+    //  this.classList.add('in');
+
+    //  setTimeout(() => {
+    //      this.classList.remove('in');
+
+    //  },2000)
+
+
+    // })
+    
+    // const Jully = {
+    //     name: 'Jully',
+    //     date:'2017-05-07',
+    //     todos: [
+    //         {name: 'Go to Store',completed:false},
+    //         {name: 'Reading', completed:true},
+    //         {name: 'Coding', completed:true}
+        
+    //     ]
+    //          }
+
+    // const template = `
+    //  <ul>
+    //     ${Jully.todos.map(todo => `
+    //         <li>${todo.name} ${todo.completed ? '√' : '×'}</li>
+            
+    //         `).join('')}
+    // </ul>
+    
+    // `
+    // document.body.innerHTML = template;
+
+
+
+    function highlight (strings, ...values) {
+        const highlighted = values.map(value => `<span class="highlight">${value}</span>`);
+        // let str = '';
+        // strings.forEach(string,i) =>str += `$(string)${highlighted[i] || ``}`;
+        // return 'Hello World!'
+        return strings.reduce((prev,curr,i) => `${prev}${curr}${highlighted[i] || ''}`,'')
+
+    }
+    const user = 'Bai';
+    const topic = 'Learn to use es6';
+    const sentence = highlight`${user} Has coding topic ${topic}`;
+    document.body.innerHTML = sentence;
+    </script>  
+
+
+
+    
+</body>
+</html>
