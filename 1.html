@@ -67,8 +67,28 @@
     document.body.innerHTML = sentence;
     </script>  
 
+    <ul>
 
+        <li>Go to Wuhan</li>
+        <li>Watch TV</li>
+        <li>Play Sanguozhi</li>
+    </ul>
+<script>
+ const todos = document.querySelectorAll('li');
+ 
+//  const todosArr = Array.from(todos);
+//  const names = todosArr.map(todo => todo.textContent)
+const names = Array.from(todos,todo => todo.textContent);
+console.log(names);
 
+function sum() {
+    console.log(arguments)?
+    return Array.from(arguments).reduce((prev,curr) =>prev + curr,0)
+    
+}
+
+Array.of(1);
+</script>
     
 </body>
 </html>
