@@ -14,7 +14,7 @@
         height: 600px;
     }
     
-    .h2{
+    .h2{ujn 
         /* background: #ec2c64; */
         justify-content: center;
         align-items: center;
@@ -48,5 +48,32 @@
         return [...word].map(letter => `<span>${letter}</span>`).join('')
     }
     </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js">
+</script>
+
+<script>
+let username;
+
+const userPromise = axios.get('https://api.github.com/users');
+ userPromise
+ 
+ .then(reponse => {
+     username = reponse.date[0].login;
+     return axios.get(`https://api.github.com/uers/${username}/repos`)
+ })
+ 
+ .then(reponse =>{
+     console.log(reponse.data);
+ })
+
+ .catch(err =>{
+
+    console.error(err);
+ }
+
+</script>
+
 </body>
 </html>

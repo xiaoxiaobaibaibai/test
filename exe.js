@@ -166,3 +166,35 @@ let sum2 = result.reduce(function (prev,cur) {
 const yongers = ['a','b','v']
 
 const members = [...yongers]
+
+const todos = [...document.querySelectorAll('li')];
+const shoppinglist = ['milk','sheet'];
+
+const todos = [
+    {id:1,name:'Go to Store',completed:false},
+    {id:2,name:'Learn ES6',completed:false},
+    {id:3,name:'Go to shopping',completed:true},
+]
+ const id = 2;
+ const todoIndex todos.findIndex(todo => todo.id === id);
+const newTodos = [...todos.slice(0,todoIndex),...todos.slice(todoIndex + 1)]
+
+const p = new Promise((resolve,reject) =>{
+
+    setTimeout(() => {
+        reject(Error('hahaha'));
+    },2000);
+});
+
+p.then(data =>{ console.log(data)})
+ .catch(err => { console.error(err)});
+
+const peter = Symbol('peter');
+const Lina = Symbol('Lina');
+
+const classroom = {
+    [Symbol('Lily')]:{ grade:60, gender:'female'},
+    [Symbol('Lily')]:{ grade:60, gender:'female'}
+}
+
+const syms = Object.getOwnPropertySymbols(classroom).map(sym => classroom[sym])
