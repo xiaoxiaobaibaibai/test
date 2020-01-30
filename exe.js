@@ -198,3 +198,47 @@ const classroom = {
 }
 
 const syms = Object.getOwnPropertySymbols(classroom).map(sym => classroom[sym])
+
+
+// function User(name,email) {
+//     this.name = name;
+//     this.email = email;
+    
+    
+// }
+
+// User.prototype.info = function () {
+//         console.log(`Hi,I'm ${this.name}`);
+//     }
+
+
+// const codecasts = new User('codecasts','i@codecates.com');
+// const laravist = new User('lara','i@laravist.com')
+
+class User {
+
+    constructor(name,email){
+        this.name = name;
+        this.email = email;
+
+    }
+
+    info(){
+        console.log(`Hi,I'm ${this.name}`);
+    }
+
+    static description(){
+
+        console.log(`Hi,I'm ${this.name}`);
+
+    }
+
+    set github(value){
+
+        this.githubName = value;
+    }
+
+    get github(){
+        return ``
+    }
+}
