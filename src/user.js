@@ -1,6 +1,9 @@
 import { url } from './config';
+import slug from 'slug';
+import md5 from 'md5';
 
-function User(name,email) {
+
+export default function User(name,email) {
     return{
         name,
         email,
@@ -9,6 +12,12 @@ function User(name,email) {
 }
 
 
-function creatURL(name) {
-    return `${url}`
+export function creatURL(name) {
+    return `${url}/user/${slug(name)}`;
+}
+
+export function gravatr(email) {
+
+    return `https://www.gravatar.com/avatar/${md5(email)}`;
+    
 }
