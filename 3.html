@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
         /* p,span {
             line-height: 26px;
             text-indent: 2em;
@@ -36,28 +36,68 @@
         a :active {
             color: green;
         } */
+        
         span {
             width: 100px;
             display: block;
         }
+        
         div {
             display: inline;
         }
+        
         a {
             display: inline-block;
             width: 100px;
             height: 30px;
-            background-color:red;
+            background-color: red;
             text-align: center;
             line-height: 30px;
             text-decoration: none;
-            
         }
+        
         a:hover {
-            background-color:orange;
+            background-color: orange;
+        }
+        
+        div {
+            /* background-image: url();
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            background-attachment: fixed; */
+            background: #ccc url() no-repeat fixed 10px center;
+            overflow: hidden;
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        
+        .clearfix {
+            *zoom: 1;
+        }
+        
+        .clearfix::before {
+            content: "";
+            display: table;
+        }
+        
+        div {
+            /* position: static;
+            position: relative; */
+            position: absolute;
+            display: none;
+            /* position: fixed; */
+            top: 100px;
+            z-index: 1;
         }
     </style>
 </head>
+
 <body>
 
     <!-- <form action="" method="post"> 
@@ -78,5 +118,7 @@
     <a href="#">hello</a>
     <a href="#">world</a>
     <a href="#">again</a>
+    <div class="bn"></div>
 </body>
+
 </html>
