@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .damao {
+            /* display: none; 不保留位置*/
+            visibility: hidden;
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+        
+        .ermao {
+            overflow: hidden;
+            overflow: auto;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+        
+        input {
+            outline: none;
+        }
+        
+        textarea {
+            outline: none;
+            border: 1px solid red;
+            resize: none;
+        }
+        
+        div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        /* 关于link与@import的区别:
+区别1：link是XHTML标签，除了加载CSS外，还可以定义RSS等其他事务；@import属于CSS范畴，只能加载CSS。
+区别2：link引用CSS时，在页面载入时同时加载；@import需要页面网页完全载入以后加载。
+区别3：link是XHTML标签，无兼容问题；@import是在CSS2.1提出的，低版本的浏览器不支持。
+区别4：link支持使用Javascript控制DOM去改变样式；而@import不支持。 */
+        
+        a {
+            display: inline-block;
+            height: 33px;
+            background: url() no-repeat;
+        }
+        
+        a span {
+            display: inline-block;
+            height: 33px;
+            background: url() no-repeat right top;
+            padding-right: 15px;
+        }
+        
+        </head><body><!-- <div class="damao"></div><div class="ermao"></div><ul><li style="cursor: default;"</li><li style="cursor: pointer;"</li><li style="cursor: move;"</li><li style="cursor: text;"</li><li style="cursor: not-allowed;"</li></ul><input type="text"><textarea name="" id="" cols="30" rows="10"></textarea>--><input type="datatime-local" name="bdaytime" value="2020-2-21 15:33"><input type="data" name="bday"><a href="#"><span></span></a>in </body></html>

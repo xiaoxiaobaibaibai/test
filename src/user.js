@@ -3,8 +3,8 @@ import slug from 'slug';
 import md5 from 'md5';
 
 
-export default function User(name,email) {
-    return{
+export default function User(name, email) {
+    return {
         name,
         email,
 
@@ -16,8 +16,8 @@ export function creatURL(name) {
     return `${url}/user/${slug(name)}`;
 }
 
-export function gravatr(email) {
+export function graver(email) {
 
     return `https://www.gravatar.com/avatar/${md5(email)}`;
-    
+
 }
