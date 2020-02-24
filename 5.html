@@ -5,10 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* 可以继承的属性：颜色、文字、字体间距行高对齐方式、列表的样式
+        所有的元素可继承： virility、cursor
+        内联元素： letter-spacing word-spacing white-space line-height color  font-.... text-... 
+         */
+        
+        input[type="search"] {
+            text-align: center;
+        }
+        
+        div[class^="iron"] div[class$="iron"] div[class*="iron"] ul li:first-child ul li:nth-child(2)
+        /*even odd */
+        
+        div {
+            width: 300px;
+            height: 300px;
+        }
+        
+        div::before {
+            content: "I";
+        }
+    </style>
 </head>
 
 <body>
     <h1>That's so <small>cool</small>!</h1>
+    <a href="mailto:2516220191@qq.com"></a>
+    <picture>
+        <source srcset="mdn-logo" media="(min-width: 600px)">
+        <img src="mdn-logo" alt="MDN">
+    </picture>
 </body>
 
 </html>
